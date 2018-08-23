@@ -63,7 +63,7 @@ tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
 
-transformations done:
+# transformations done:
 used cbind to to create train and test dataset and rbind to create a single data set from which the std and mean has to be extracted
 the train data set was formed using subject_train,xtrain,ytrain
 the test data set was formed using the subject_test,xtest,ytest
