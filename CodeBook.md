@@ -62,3 +62,11 @@ tBodyGyroMean
 tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
+
+transformations done:
+used cbind to to create train and test dataset and rbind to create a single data set from which the std and mean has to be extracted
+the train data set was formed using subject_train,xtrain,ytrain
+the test data set was formed using the subject_test,xtest,ytest
+then using merge funtion provided the data set, created above, with the descriptive name
+used select funtion from dplyr package to remove activityid from the data set as the activity descriptive names were already provided
+used order function to order up the data set in ascending order according to the subject
