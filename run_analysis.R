@@ -1,3 +1,4 @@
+library(dplyr)
 #reading the features list provided in a variable called featureslists
 #I changed the name of the zip folder as "project" rather than"UCI HAR Dataset" for my convenience and ease to for accessing the data
 
@@ -40,6 +41,7 @@ merged<-merge(StdMean,activitylabel, by = "activityid", all = TRUE)
 #Creating a second, independent tidy data set with the average of each variable for each activity and each subject
 final<-aggregate(.~ subjectid + activityid,merged,mean)
 final<-final[order(final$subjectid,final$activityid),]
+final<-select(final,-activityid)
 
 
 #writing the above tidy data set into a txt file
